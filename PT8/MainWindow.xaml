@@ -1,0 +1,34 @@
+﻿<Window x:Class="PT8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PT8"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <!-- Menu w LEWEJ belce - zgodnie z tekstem instrukcji -->
+        <ToolBar x:Name="toolBar"  HorizontalAlignment="Left" Margin="0,0,0,0">
+            <Menu x:Name="menu" Height="600" Width="50" HorizontalAlignment="Left" >
+                <MenuItem Header="File" VerticalAlignment="Top">
+                    <MenuItem x:Name="optionOpen" Header="Open" Click="optionOpen_Click" />
+                    <Separator />
+                    <MenuItem x:Name="optionExit" Header="Exit" Click="optionExit_Click" />
+                    <Separator />
+                    <MenuItem x:Name="optionAbout" Header="About" Click="optionAbout_Click" />
+                </MenuItem>
+            </Menu>
+        </ToolBar>
+        
+        <TreeView x:Name="treeView" HorizontalAlignment="Left" Height="540" VerticalAlignment="Top" Width="250" Margin="50,0,0,0"/>
+        <ScrollViewer x:Name="scrollViewer" HorizontalAlignment="Left" Height="540" Margin="300,0,0,25" VerticalAlignment="Top" Width="480"
+           ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <TextBlock x:Name= "FileContent" />
+        </ScrollViewer>
+        <StatusBar x:Name="statusBar"  VerticalAlignment="Bottom" Height="25">
+            <TextBlock x:Name="RASHbar" Margin="20,0,0,0"/>
+        </StatusBar>
+
+    </Grid>
+
+</Window>

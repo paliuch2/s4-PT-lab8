@@ -1,0 +1,27 @@
+﻿<Window x:Class="PT8.FormDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PT8"
+        mc:Ignorable="d"
+        Title="Create" Height="400" Width="350">
+    <Grid>
+        
+        <Label x:Name="labelName" Content="Name:" HorizontalAlignment="Left" FontSize="12" Margin="50,50,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="fileName" HorizontalAlignment="Left" Height="32" FontSize="20" Margin="100,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="225"/>
+        <RadioButton x:Name="FileRB" Margin = "50,100,100,0" FontSize="12" >File</RadioButton>
+        <RadioButton x:Name="DirectoryRB" Margin = "100,100,100,0" FontSize="12">Directory</RadioButton>
+
+        <CheckBox x:Name="ReadOnlyCB" Grid.Row="1" Margin="50,150,0,0"  Content="ReadOnly"   VerticalAlignment="Top" />
+        <CheckBox x:Name="ArchiveCB" Grid.Row="2" Margin="50,180,0,0"  Content="Archive"   VerticalAlignment="Top" />
+        <CheckBox x:Name="HiddenCB" Grid.Row="3" Margin="50,210,0,0"  Content="Hidden"  VerticalAlignment="Top" />
+        <CheckBox x:Name="SystemCB" Grid.Row="4" Margin="50,240,0,0"  Content="System"  VerticalAlignment="Top" />
+
+        <Button x:Name="OKbutton"  Width="80" Height="30" Margin="50,300,0,0"  Content="OK" HorizontalAlignment="Left" 
+                VerticalAlignment="Top"  Click="OKButton_Click"/>
+        <Button x:Name="Cancelbutton"  Width="80" Height="30" Margin="150,300,0,0"  Content="Cancel" HorizontalAlignment="Left" 
+                VerticalAlignment="Top" Click="CancelButton_Click"/>
+
+    </Grid>
+</Window>
